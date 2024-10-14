@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Pop-up Welcome Screen */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.popup-content {
+    text-align: center;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ab7; /* Darker color on hover */
+}
+
+/* Hero Section */
+header.hero {
+    background: linear-gradient(to right, #4a90e2, #50e3c2);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block; /* Makes the ul an inline block to center it */
+}
+
+nav li {
+    display: inline; /* Keep items inline */
+    margin: 0 20px; /* Space between menu items */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Menu Sections */
+.menu-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 5%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Chart */
+.skills-chart {
+    background: #e0e0e0; /* Background for the chart */
+    padding: 10px;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+/* Container for the skill bar */
+.bar-container {
+    background: white; /* Background for the bar */
+    border-radius: 5px;
+    width: 100%; /* Full width */
+    height: 20px; /* Height of the bar */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Progress Bars */
+.bar {
+    background: #4caf50; /* Color of the filled bar */
+    height: 100%; /* Full height of the container */
+    transition: width 1s ease; /* Animation for the width */
+}
+
+/* Accordion FAQ */
+.accordion {
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s ease;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #357ab7;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    display: none;
+    overflow: hidden;
+}
+
+/* Feedback Form */
+#feedback-form {
+    margin-top: 20px;
+}
+
+/* Rating Slider */
+.rating-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+.rating-slide {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
