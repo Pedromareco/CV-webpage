@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Dias - Lebenslauf</title>
-    <link rel="stylesheet" href="cv-website.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="cv-website.css">
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("UTwfc9SPhEno6B13X"); // Initialize with your User ID
+            emailjs.init("UTwfc9SPhEno6B13X");
         })();
     </script>
 </head>
 <body>
-    <div class="game-menu">
-        <header class="hero">
-            <h1>Pedro Alexandre Mareco Dias</h1>
-            <p>Aspiring Software Developer</p>
-        </header>
+    <!-- Pop-up Welcome Screen -->
+    <div class="popup" id="welcome-popup">
+        <div class="popup-content">
+            <h2>Willkommen!</h2>
+            <button id="play-button">Enter</button>
+            <button id="exit-button">Exit</button>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="header-content">
+            </div>
+            <div class="header-text">
+                <h1>Pedro Alexandre Mareco Dias</h1>
+                <h2>Aspiring Software Developer</h2>
+                <a href="#contact" class="cta-button">Kontakt</a>
+            </div>
+        </div>
+    </header>
 
         <nav class="main-nav">
             <ul>
@@ -27,7 +41,6 @@
                 <li><a href="#projects">Website Entwicklung</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#faq">FAQs</a></li>
-                <li><a href="#feedback-section">Bewertung und Feedback</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
@@ -35,7 +48,37 @@
         <!-- About Section -->
         <section id="about" class="menu-section">
             <h2>Über mich</h2>
-            <p>Als motivierter und lernfreudiger Softwareentwickler bringe ich eine starke Leidenschaft für Technologie und Programmierung mit. Mein Fokus liegt darauf, meine Fähigkeiten stetig zu erweitern, neue Herausforderungen anzunehmen und durch innovative Lösungen in einem dynamischen Team einen wertvollen Beitrag zu leisten.</p>
+            <div class="about-container">
+                <div class="profile-container">
+                    <img src="images/pedro-dias-icon.jpg" alt="Profile Picture" class="profile-img">
+                </div>
+                <div class="cards-container">
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <h3>Über mich</h3>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li><strong>Name:</strong> Pedro Alexandre Mareco Dias</li>
+                                <li><strong>Alter:</strong> 22 Jahre alt</li>
+                                <li><strong>Geschlecht:</strong> Männlich</li>
+                            </ul>
+                            <p>Ich bin eine leidenschaftliche und lernwillige Person mit starkem Interesse an Technologie und Programmierung. Mein Ziel ist es, meine Kenntnisse in einem dynamischen Team auszubauen.</p>
+                        </div>
+                        <div class="about-card">
+                            <h3>Woher komme ich?</h3>
+                            <p>Ich wurde in Portimão, Portugal, geboren. Dann zog ich nach Portel, im Zentrum von Portugal. Mit 14 Jahren zog ich nach Erding, wo ich die meiste Zeit meiner Schulzeit verbrachte, bis ich nach Walpertskirchen, ebenfalls in Deutschland, zog. Ich ging durch einige harte Zeiten dort und entschied, dass ich einen Neuanfang brauchte, weshalb ich mich entschied, nach St. Peter am Hart in Österreich zu ziehen.</p>
+                        </div>
+                        <div class="about-card">
+                            <h3>Hobbys</h3>
+                            <p>Ich spiele American Football und League of Legends – beides Teamspiele, die mir beigebracht haben, wie man im Team arbeitet und wertvolle Lektionen über die Selbstbeherrschung in einer führenden oder unterstützenden Rolle vermittelt haben.</p>
+                            <p>Ich koche auch gerne und gehe regelmäßig ins Fitnessstudio, wo ich bereits 25 Kilo abgenommen habe. Dies zeigt, dass ich, sobald ich mich etwas verpflichtet habe, durchhalte.</p>
+                        </div>
+                    </div>
+                    <div class="arrow-container">
+                        <button id="prev-card" class="scroll-button">&#10094;</button>
+                        <button id="next-card" class="scroll-button">&#10095;</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Skills Section -->
@@ -67,66 +110,172 @@
                         <div class="bar" style="width: 80%;"></div>
                     </div>
                 </div>
-            </div>
-            <p>Ich arbeite täglich daran, meine Programmierkenntnisse zu erweitern. Besonders fokussiere ich mich auf die Weiterentwicklung meiner Fähigkeiten in Python und JavaScript, um diese effizient in praktischen Projekten anzuwenden.</p>
         </section>
 
-        <!-- Testimonials Section (with slider) -->
+        <!-- Experience Section -->
+        <section id="experience" class="menu-section">
+            <h2>Berufserfahrung</h2>
+            <div class="job">
+                <h3>Online Marketing Lehre – Hargassner Ges.mbH</h3>
+                <p>2023-2024</p>
+                <p>Erworbene Fähigkeiten: Projektmanagement, Teamarbeit, Technisches Verständnis, Inhaltserstellung.</p>
+            </div>
+            <div class="job">
+                <h3>Content Manager – Majorel (TikTok)</h3>
+                <p>2022</p>
+                <p>Moderierte Inhalte gemäß festgelegten Richtlinien und entwickelte analytische Fähigkeiten zur Erkennung potenziell problematischer Inhalte.</p>
+            </div>
+        </section>
+
+        <!-- Website Entwicklung Section -->
+        <section id="projects" class="menu-section">
+            <h2>Website Entwicklung</h2>
+            <p>Diese Website wurde von mir selbst erstellt, um meine Fähigkeiten und Erfahrungen zu präsentieren. Sie können das Projekt auf GitHub einsehen: <a href="https://github.com/Pedromareco/CV-webpage" target="_blank">GitHub Repository</a></p>
+        </section>
+    
+        <!-- Testimonials -->
         <section id="testimonials" class="menu-section">
             <h2>Testimonials</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-slide">
-                    <img src="images/markus-fuchs-icon#.jpeg" alt="Markus Fuchs" class="testimonial-img">
-                    <p><i>"Markus' testimonial placeholder text."</i> - Markus Fuchs, HTL Braunau Lehre</p>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="images/bit.jpeg" alt="Franz Mairinger-Weindl" class="testimonial-img">
-                    <p><i>"Franz' testimonial placeholder text."</i> - Franz Mairinger-Weindl, BIT Schulungscenter</p>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="images/henry-icon.jpeg" alt="Henry Stonell" class="testimonial-img">
-                    <p><i>"Henry's testimonial placeholder text."</i> - Henry Stonell, ERP Developer at DEUFOL</p>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="images/xhemail-icon.jpeg" alt="Xhemail Sherifi" class="testimonial-img">
-                    <p><i>"Xhemail's testimonial placeholder text."</i> - Xhemail Sherifi, Software Developer at Atruvia AG</p>
+        
+            <!-- Testimonial 1 -->
+            <div id="testimonial1" class="tabcontent">
+                <div class="testimonial-content">
+                    <img src="images/markus-fuchs-icon.jpeg" alt="Markus Fuchs" class="testimonial-icon">
+                    <div class="testimonial-bubble">
+                        <p class="testimonial-text">"Pedro ist ein sehr engagierter und talentierter Entwickler."</p>
+                        <p><strong>Markus Fuchs – HTL Braunau Lehrkraft</strong></p>
+                    </div>
                 </div>
             </div>
+        
+            <!-- Testimonial 2 -->
+            <div id="testimonial2" class="tabcontent" style="display:none;">
+                <div class="testimonial-content">
+                    <img src="images/bit.jpeg" alt="Franz Mairinger-Weindl" class="testimonial-icon">
+                    <div class="testimonial-bubble">
+                        <p class="testimonial-text">"Er hat eine großartige Fähigkeit, im Team zu arbeiten."</p>
+                        <p><strong>Franz Mairinger-Weindl – Trainer am BIT Schulungscenter</strong></p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Testimonial 3 -->
+            <div id="testimonial3" class="tabcontent" style="display:none;">
+                <div class="testimonial-content">
+                    <img src="images/henry-icon.jpeg" alt="Henry Stonell" class="testimonial-icon">
+                    <div class="testimonial-bubble">
+                        <p class="testimonial-text">"Seine analytischen Fähigkeiten sind bemerkenswert."</p>
+                        <p><strong>Henry Stonell – ERP-Entwickler bei DEUFOL</strong></p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Testimonial 4 -->
+            <div id="testimonial4" class="tabcontent" style="display:none;">
+                <div class="testimonial-content">
+                    <img src="images/xhemail-icon.jpeg" alt="Xhemail Sherifi" class="testimonial-icon">
+                    <div class="testimonial-bubble">
+                        <p class="testimonial-text">"Pedro bringt frische Ideen und ist stets bereit zu lernen."</p>
+                        <p> <strong>Xhemail Sherifi – Softwareentwickler bei Atruvia AG</strong></p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Buttons with Names Below Testimonials -->
+            <div class="tab">
+                <button class="tablinks" onclick="openTestimonial(event, 'testimonial1')">Markus Fuchs</button>
+                <button class="tablinks" onclick="openTestimonial(event, 'testimonial2')">Franz Mairinger-Weindl</button>
+                <button class="tablinks" onclick="openTestimonial(event, 'testimonial3')">Henry Stonell</button>
+                <button class="tablinks" onclick="openTestimonial(event, 'testimonial4')">Xhemail Sherifi</button>
+            </div>
         </section>
-
+        
         <!-- FAQ Section with Accordion -->
         <section id="faq" class="menu-section">
             <h2>FAQs</h2>
             <div class="faq-item">
-                <button class="accordion">Wie bleibst du mit neuen Technologien auf dem Laufenden?</button>
+                <button class="accordion">Was lernst du derzeit?</button>
                 <div class="panel">
-                    <p>Ich halte mich durch das Verfolgen von Branchenblogs, die Teilnahme an Webinaren und das kontinuierliche Arbeiten an Projekten, die mich herausfordern, neue Tools und Techniken zu nutzen, auf dem neuesten Stand. Kontinuierliches Lernen ist ein wesentlicher Bestandteil meines Alltags.</p>
+                    <p>Ich verbessere derzeit meine Python- und JavaScript-Fähigkeiten und lerne Datenbanken. Ich habe mit Microsoft Access begonnen und werde nun zu MySQL übergehen. Danach möchte ich PHP und C# lernen.</p>
                 </div>
             </div>
-
             <div class="faq-item">
-                <button class="accordion">Was motiviert dich, eine Karriere in der Programmierung zu verfolgen?</button>
+                <button class="accordion">An welchen Projekten arbeitest du gerne?</button>
                 <div class="panel">
-                    <p>Ich liebe es, komplexe Probleme zu lösen und die Zufriedenheit, etwas von Grund auf zu erstellen. Die Programmierung ermöglicht es mir, Ideen in reale, funktionierende Lösungen umzusetzen, und das ist es, was meine Leidenschaft für dieses Feld antreibt.</p>
+                    <p>Ich interessiere mich für alle Arten von Projekten. Derzeit konzentriere ich mich auf Webentwicklung, da ich hier einige Vorkenntnisse habe, bin aber für alles offen.</p>
                 </div>
             </div>
-
+            <div class="faq-item">
+                <button class="accordion">Wie gehst du beim Programmieren an Probleme heran?</button>
+                <div class="panel">
+                    <p>Ich nehme mir die Zeit, das Problem aus verschiedenen Blickwinkeln zu betrachten, um nicht nur die richtige Lösung zu finden, sondern auch die optimalste Lösung für meine Bedürfnisse. Wenn ich keine Lösung finde, zögere ich nicht, um Hilfe zu bitten.</p>
+                </div>
+            </div>
             <div class="faq-item">
                 <button class="accordion">Was sind deine langfristigen Karriereziele?</button>
                 <div class="panel">
                     <p>Ich möchte mich irgendwann als Freelancer in diesem Bereich etablieren.</p>
                 </div>
             </div>
+            <div class="faq-item">
+                <button class="accordion">Wie können dich potenzielle Arbeitgeber kontaktieren?</button>
+                <div class="panel">
+                    <p>Sie können mein Kontaktformular am Ende der Seite nutzen oder mich direkt über Telefon erreichen:</p>
+                    <p>Telefon: +43 664 1281779 | <a href="https://www.linkedin.com/in/pedro-alexandre-mareco-dias/">LinkedIn-Profil</a></p>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="menu-section">
-            <h2>Kontakt</h2>
-            <p>Sie können mich erreichen über:</p>
-            <p><a href="mailto:pedro.365.dias@gmail.com">pedro.365.dias@gmail.com</a> | +43 664 1281779</p>
+            <h2>Kontaktformular</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Nachricht:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <input type="submit" value="Absenden">
+            </form>
+        
+            <p class="contact-text">Oder Sie können mich jederzeit unter der folgenden Telefonnummer kontaktieren:</p>
+            <p class="contact-phone">Telefon: +43 664 1281779</p>
         </section>
-    </div>
+        
+   <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Left side: Contact Info -->
+        <div class="personal-info">
+            <p>Email: <a href="mailto:pedro.365.dias@gmail.com">pedro.365.dias@gmail.com</a></p>
+            <p>Telefon: <span class="white-text">+43 664 1281779</span></p>
+            <p>
+                <a href="https://www.linkedin.com/in/pedro-alexandre-mareco-dias/" class="white-text">LinkedIn Profil</a>
+            </p>
+        </div>
 
-    <script src="cv-website.js"></script> <!-- Link to your JavaScript file -->
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Right side: Address -->
+        <div class="contact-info">
+            <p>Adresse: St. Peter 1, 4963 St. Peter am Hart</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="cv-website.js"></script>
+
+    
 </body>
 </html>

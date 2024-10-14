@@ -1,3 +1,57 @@
+// Initialize variables for About Me section
+let currentCard = 0; // Index of the currently displayed card
+const cards = document.querySelectorAll('.about-card'); // Get all cards
+
+function updateCardDisplay() {
+    const cardsContainer = document.querySelector('.about-cards');
+    const cardWidth = cards[0].offsetWidth; // Get the width of a card
+    cardsContainer.style.transform = `translateX(-${currentCard * cardWidth}px)`; // Move cards left
+}
+
+// Next button functionality for cards
+document.getElementById('next-card').addEventListener('click', function() {
+    if (currentCard < cards.length - 1) {
+        currentCard++;
+        updateCardDisplay();
+    }
+});
+
+// Previous button functionality for cards
+document.getElementById('prev-card').addEventListener('click', function() {
+    if (currentCard > 0) {
+        currentCard--;
+        updateCardDisplay();
+    }
+});
+
+// Initialize the first card display
+updateCardDisplay();
+
+function openTestimonial(evt, testimonialName) {
+    var i, tabcontent, tablinks;
+
+    // Hide all tab content
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove active class from all tabs
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the selected tab content and add active class to the tab
+    document.getElementById(testimonialName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Show the first testimonial by default
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".tablinks").click();
+});
+
 // Skill Bar Animation
 window.onload = function() {
     const skills = document.querySelectorAll('.skill .bar');
@@ -41,22 +95,6 @@ acc.forEach(button => {
         } else {
             panel.style.display = "block";
         }
-    });
-});
-
-// Handling Feedback Form Submission and Email Sending
-document.getElementById('feedback-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    emailjs.send("service_upd0knq", "template_54m056l", {
-        rating: document.getElementById('rating').value,
-        feedback: document.getElementById('feedback').value
-    })
-    .then(function(response) {
-        alert('Feedback erfolgreich gesendet!');
-        document.getElementById('feedback-form').reset(); // Reset form after sending
-    }, function(error) {
-        alert('Fehler beim Senden des Feedbacks: ' + JSON.stringify(error));
     });
 });
 
