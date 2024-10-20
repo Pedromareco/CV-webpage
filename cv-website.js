@@ -1,10 +1,10 @@
 // Initialize variables for About Me section
-let currentCard = 0; // Index of the currently displayed card
+let currentCard = 0; //
 const cards = document.querySelectorAll('.about-card'); // Get all cards
 
 function updateCardDisplay() {
     const cardsContainer = document.querySelector('.about-cards');
-    const cardWidth = cards[0].offsetWidth; // Get the width of a card
+    const cardWidth = cards[0].offsetWidth; //  widthcard
     cardsContainer.style.transform = `translateX(-${currentCard * cardWidth}px)`; // Move cards left
 }
 
@@ -16,7 +16,6 @@ document.getElementById('next-card').addEventListener('click', function() {
     }
 });
 
-// Previous button functionality for cards
 document.getElementById('prev-card').addEventListener('click', function() {
     if (currentCard > 0) {
         currentCard--;
@@ -24,7 +23,7 @@ document.getElementById('prev-card').addEventListener('click', function() {
     }
 });
 
-// Initialize the first card display
+//  first card display
 updateCardDisplay();
 
 function openTestimonial(evt, testimonialName) {
@@ -98,7 +97,7 @@ acc.forEach(button => {
     });
 });
 
-// Handling Contact Form Submission and Email Sending
+//  Contact Form Submission and Email Sending
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting the default way
     
