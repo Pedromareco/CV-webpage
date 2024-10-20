@@ -1,11 +1,11 @@
 // Initialize variables for About Me section
-let currentCard = 0; //
-const cards = document.querySelectorAll('.about-card'); // Get all cards
+let currentCard = 0; 
+const cards = document.querySelectorAll('.about-card'); 
 
 function updateCardDisplay() {
     const cardsContainer = document.querySelector('.about-cards');
-    const cardWidth = cards[0].offsetWidth; //  widthcard
-    cardsContainer.style.transform = `translateX(-${currentCard * cardWidth}px)`; // Move cards left
+    const cardWidth = cards[0].offsetWidth; 
+    cardsContainer.style.transform = `translateX(-${currentCard * cardWidth}px)`; 
 }
 
 // Next button functionality for cards
@@ -56,9 +56,9 @@ window.onload = function() {
     const skills = document.querySelectorAll('.skill .bar');
     skills.forEach(skill => {
         const width = skill.style.width;
-        skill.style.width = '0%'; // Start from 0%
+        skill.style.width = '0%'; 
         setTimeout(() => {
-            skill.style.width = width; // Animate to actual width
+            skill.style.width = width; 
         }, 100);
     });
 
@@ -72,13 +72,13 @@ window.onload = function() {
 
     // Play button event
     playButton.onclick = function() {
-        popup.style.display = 'none'; // Close popup
+        popup.style.display = 'none'; 
     };
 
     // Exit button event
     exitButton.onclick = function() {
         alert("Game Over! Thanks for visiting.");
-        window.location.href = "about:blank"; // Redirect to a blank page
+        window.location.href = "about:blank"; 
     };
 };
 
@@ -99,12 +99,12 @@ acc.forEach(button => {
 
 //  Contact Form Submission and Email Sending
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting the default way
+    event.preventDefault(); 
     
     emailjs.sendForm('service_upd0knq', 'template_8x2vc28', this)
         .then(function() {
             alert('Nachricht erfolgreich gesendet!');
-            document.getElementById('contact-form').reset(); // Reset form after sending
+            document.getElementById('contact-form').reset(); 
         }, function(error) {
             alert('Fehler beim Senden der Nachricht: ' + JSON.stringify(error));
         });

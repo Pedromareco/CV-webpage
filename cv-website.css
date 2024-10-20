@@ -44,15 +44,15 @@ button:hover {
 }
 
 .header {
-    background-image: url('images/lisbon-landscape.jpg'); /* Replace with your image path */
+    background-image: url('images/lisbon-landscape.jpg'); 
     background-size: cover;
     background-position: center;
-    height: 300px; /* Adjust the height as needed */
+    height: 300px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Text color */
+    color: white; 
     text-align: center;
 }
 
@@ -75,6 +75,13 @@ h2 {
     font-size: 1.5em;
     color: white;
 }
+
+h3 {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin: 0.5em 0; 
+}
+
 
 .cta-button {
     display: inline-block;
@@ -188,7 +195,7 @@ nav a {
     padding: 15px;
     text-align: left;
     overflow: hidden;
-    word-wrap: break-word; /* Ensure text breaks within the card */
+    word-wrap: break-word; 
 }
 
 /* Skills Chart */
@@ -228,7 +235,7 @@ nav a {
     outline: none;
     cursor: pointer;
     padding: 10px 20px;
-    margin: 0 10px; /* Add space between buttons */
+    margin: 0 10px; 
     transition: background-color 0.3s;
 }
 
@@ -249,14 +256,14 @@ nav a {
 /* Testimonial Content Layout */
 .testimonial-content {
     display: flex;
-    align-items: flex-start; /* Align icon and text at the start */
+    align-items: flex-start; 
 }
 
 .testimonial-icon {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-right: 15px; /* Space between icon and bubble */
+    margin-right: 15px; 
 }
 
 .testimonial-bubble {
@@ -279,12 +286,12 @@ nav a {
 }
 
 .testimonial-text {
-    font-style: italic; /* Italic text for the testimonial */
+    font-style: italic;
     margin: 0;
 }
 
 .testimonial-bubble strong {
-    font-style: normal; /* Name not italicized */
+    font-style: normal; 
 }
 
 /* FAQ Section with Accordion */
@@ -316,7 +323,7 @@ nav a {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    margin: 0 auto; /* Center the form */
+    margin: 0 auto; 
 }
 /* Contact Section */
 #contact {
@@ -330,7 +337,7 @@ nav a {
 }
 
 #contact-form {
-    display: inline-block; /* To center the form */
+    display: inline-block; 
     text-align: left;
     background-color: #f4f4f9;
     padding: 20px;
@@ -344,7 +351,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    align-items: center; /* Vertically align labels and input fields */
+    align-items: center; 
 }
 
 .form-group label {
@@ -362,11 +369,11 @@ nav a {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    box-sizing: border-box; 
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing of the textarea */
+    resize: vertical; 
     height: 100px;
 }
 
@@ -423,7 +430,7 @@ footer {
 }
 
 .personal-info p {
-    margin: 5px 0; /* Small space between items */
+    margin: 5px 0; 
 }
 
 /* Right Side: Address */
@@ -437,15 +444,15 @@ footer {
     height: 50px;
     width: 2px;
     background-color: white;
-    margin: 0 20px; /* Space around the divider */
+    margin: 0 20px; 
 }
 
 /* White Text for Phone Number and LinkedIn */
 .white-text {
     color: white;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none; 
 }
 
 .white-text:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline; 
 }
